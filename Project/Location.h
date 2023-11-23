@@ -5,6 +5,7 @@ using namespace std;
 
 class Location {
 private:
+
     int maxSeats;
     int numRows;
     int numZones;
