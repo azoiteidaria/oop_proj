@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Location.h"
 #include "Event.h"
+#include "Ticket.h"
 using namespace std;
 
 Location::Location() : maxSeats(0), numRows(0), numZones(0), seatsPerRow(0) {}
@@ -76,6 +77,30 @@ void Event::setTime(const string& time) {
     this->time = time;
 }
 
+
+Ticket::Ticket() : uniqueID(0) {}
+
+Ticket::Ticket(const string& ticketType, int uniqueID) : ticketType(ticketType), uniqueID(uniqueID) {}
+
+const string& Ticket::getTicketType() const {
+    return ticketType;
+}
+
+int Ticket::getUniqueID() const {
+    return uniqueID;
+}
+
+void Ticket::setTicketType(const string& ticketType) {
+    // Validation logic here
+    this->ticketType = ticketType;
+}
+
+void Ticket::setUniqueID(int uniqueID) {
+    // Validation logic here
+    this->uniqueID = uniqueID;
+}
+
+// Main.cpp
 int main() {
   
     Location eventLocation;
